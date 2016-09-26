@@ -515,7 +515,7 @@ api section
 
 /* ISOTOPE BOX CSS */
 .iso-box-section {
-    width: 100%;
+    width: 70%;
 }
 .iso-box-wrapper {
     width: 100%;
@@ -715,7 +715,7 @@ footer p {
 /* ==========================================================================
 media quires for mobile
 ========================================================================== */
-@media (max-width: 440px) {
+@media (max-width: 240px) {
   #home {
     padding-top: 320px;
     padding-bottom: 320px;
