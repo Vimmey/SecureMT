@@ -1,9 +1,11 @@
 <?php
 require_once(DIRNAME(__FILE__) . "/../../common/helpers/db/dbHelper.php");
 
-// $obj = new accountDbModel();
+ $obj = new accountDbModel();
 // $arr = array("user_id" => 2505);
 // echo print_r($obj->select($arr), true);
+
+echo print_r($obj->get_user("vmychopra", "k2342jnmkn22n2nk22"), true);
 
 class accountDbModel
 {
@@ -23,6 +25,13 @@ class accountDbModel
         }
 
         $sql = "SELECT * FROM `accounts` WHERE `user_id` = '$user_id'";
+
+        $result = $this->dbObj->query($sql);
+        return $result;
+    }
+    public function get_user($username, $password) {
+
+        $sql = "SELECT * FROM `accounts` WHERE `username` = '$username' and `password` = '$password'";
 
         $result = $this->dbObj->query($sql);
         return $result;

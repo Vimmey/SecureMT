@@ -42,6 +42,9 @@ header("Refresh: 3; url=https://vimmey.com/securemt");
     <link rel="stylesheet" href="css/nivo_themes/default/default.css">
     <link rel="stylesheet" href="css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
 

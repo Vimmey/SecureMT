@@ -2,8 +2,10 @@
 
 require_once(DIRNAME(__FILE__) .  "/db/accountsDbModel.php");
 
-// $obj = new Account_Details();
+ $obj = new Account_Details();
 // echo print_r($obj->getAccountDetails(2505), true);
+echo print_r($obj->authenticate_user("vmychoa", "k2342jnmkn22n2nk22"), true);
+
 
 class Account_Details
 {
@@ -45,6 +47,18 @@ class Account_Details
 
         }
      }
+   public function authenticate_user($username, $password, $responseType="array") {
+   
+        $result = $this->dbModel->get_user($username, $password);
+
+        if (mysqli_num_rows($result) == 0) {
+            return -1;
+        } else {
+            $row = mysqli_fetch_assoc($result);
+            $user_id = $row["user_id"];
+            return $this->getAccountDetails($user_id, "json");
+      }
+    }
  }
 
 
